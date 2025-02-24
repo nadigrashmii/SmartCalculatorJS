@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e0e5ec; /* Soft, light-gray background */
+}
+
+.calculator {
+    background: #f0f3f7;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 10px 10px 20px #bec3c9, -10px -10px 20px #ffffff;
+    text-align: center;
+    width: 350px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    background: #e6ebf1;
+    color: #333;
+    border-radius: 12px;
+    outline: none;
+    box-shadow: inset 5px 5px 10px #bec3c9, inset -5px -5px 10px #ffffff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.6em;
+    border: none;
+    cursor: pointer;
+    border-radius: 12px;
+    background: #e6ebf1;
+    color: #333;
+    box-shadow: 5px 5px 10px #bec3c9, -5px -5px 10px #ffffff;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background: #d9dde3;
+    box-shadow: inset 5px 5px 10px #bec3c9, inset -5px -5px 10px #ffffff;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Special Buttons */
+button:nth-child(1) {
+    background: #ff6b6b; /* Light Red for Clear */
+    color: white;
+    box-shadow: 5px 5px 10px #d95353, -5px -5px 10px #ff8b8b;
+}
+
+button:nth-child(1):hover {
+    background: #ff4d4d;
+}
+
+button:last-child {
+    background: #4caf50; /* Green for Equals */
+    color: white;
+    box-shadow: 5px 5px 10px #3d8c3f, -5px -5px 10px #6bdc72;
+}
+
+button:last-child:hover {
+    background: #43a047;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 500px) {
+    .calculator {
+        width: 90%;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
